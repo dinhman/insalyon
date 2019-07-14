@@ -11,8 +11,8 @@ const regSubject = /<td class="red">([^\/]*)<\/td>/gm
 const regScore = /<td class="color-red">([\d.]*)<\/td>/gm
 const regName = /<span id="ctl01_tenthisinh" class="diem">(.*)<\/span><\/p>/gm
 const headers = ['SBD', 'Tên', 'Toán', 'Văn', 'Ngoại Ngữ', 'Lí', 'Hoá', 'Sinh', 'Sử', 'Địa', 'GDCD']
-const min = 2000001
-const max = 2071045
+const min = 3300001
+const max = 3351045
 let len = max - min + 1
 let current = 0
 let errors = []
@@ -20,7 +20,7 @@ let filename = 'grade12'
 
 const fetchScore = id => {
     let promise = resolve =>
-    axios.get(`https://diemthi.tuoitre.vn/kythi2019.html?FiledValue=0${id}&MaTruong=l12hcm`)
+    axios.get(`https://diemthi.tuoitre.vn/kythi2019.html?FiledValue=&MaTruong=33`)
     .then(res => {
         const data = res.data
         const subjects = []
